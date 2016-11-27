@@ -13,7 +13,6 @@ public interface StudentRepository extends MongoRepository<Student, Integer>{
 	
 	List<Student> findByNameLike(String nameQuery);
 	
-	List<Student> findStudentsbyRollNoDesc();
 	
 	
 
