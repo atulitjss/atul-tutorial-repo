@@ -1,0 +1,48 @@
+<html>
+<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    Roll No : <input type="text" id="rollNo" />
+    <br>
+    Name: <input type="text" id="name" />
+    <br>
+    <input type="button" id="actionSaveStudent" name="Add" value="Add"/>
+
+</body>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$("#actionSaveStudent").click(function(){
+		$.ajax({
+		    url : "http://localhost:8080/api/v1/student/",
+		    type : "POST",
+		    contentType:"application/json; charset=utf-8",
+		    data: JSON.stringify({
+ 				rollNo : $("#rollNo").val(),
+ 				name : $("#name").val()
+		    }),
+
+		    success: function(data){
+		    	console.log(data);
+		    }
+
+});
+
+	});
+});
+
+$.ajax({
+    url : "http://localhost:8080/api/v1/student/",
+    type : "GET",
+    success: function(data){
+    	console.log(data);
+    }
+
+});
+
+</script>
+</html>
