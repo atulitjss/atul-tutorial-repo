@@ -14,36 +14,33 @@ import com.atul.tutorial.mongo.service.StudentService;
 
 @RestController
 public class StudentApiController {
-	
+
 	private StudentService studentService;
 
 	@Autowired
 	public void setStudentService(StudentService studentService) {
 		this.studentService = studentService;
 	}
-	
-	
-	@RequestMapping(value="/api/v1/student/",method=RequestMethod.POST)
-	public Student addStudent(@RequestBody Student student){
+
+	@RequestMapping(value = "/api/v1/student/", method = RequestMethod.POST)
+	public Student addStudent(@RequestBody Student student) {
 		return studentService.addStudent(student);
 	}
-	
-	@RequestMapping("/api/v1/student/")
-	public List<Student> getAllStudents(){
+
+	@RequestMapping(value = "/api/v1/student/", method = RequestMethod.GET)
+	public List<Student> getAllStudents() {
 		return studentService.getAllStudents();
 	}
-	
-	
-	@RequestMapping("/api/v1/student/rollNo/{rollNo}")
-	public Student getStudentByRollNo(@PathVariable Integer rollNo){
+
+	@RequestMapping(value = "/api/v1/student/rollNo/{rollNo}", method = RequestMethod.GET)
+	public Student getStudentByRollNo(@PathVariable Integer rollNo) {
 		return studentService.getStudentByRollNo(rollNo);
 	}
-	
-	@RequestMapping("/api/v1/student/name/like/{name}")
-	public List<Student> getStudentsByNameLike(@PathVariable String name){
+
+	@RequestMapping(value = "/api/v1/student/name/like/{name}", method = RequestMethod.GET)
+	public List<Student> getStudentsByNameLike(@PathVariable String name) {
 		return studentService.getStudentsByNameLike(name);
-		
+
 	}
-	
 
 }
