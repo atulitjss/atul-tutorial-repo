@@ -1,4 +1,4 @@
-package com.atul.tutorial.oauth;
+package com.atul.tutorial.oauth.model;
 
 public class Greeting {
 

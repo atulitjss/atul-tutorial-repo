@@ -1,11 +1,11 @@
-package com.atul.tutorial.oauth;
+package com.atul.tutorial.oauth.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.atul.tutorial.oauth.data.User;
-import com.atul.tutorial.oauth.data.UserRepository;
+import com.atul.tutorial.oauth.model.User;
+import com.atul.tutorial.oauth.repository.UserRepository;
 
 
 

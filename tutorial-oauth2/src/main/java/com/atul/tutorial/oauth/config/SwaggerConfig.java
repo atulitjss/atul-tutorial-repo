@@ -1,4 +1,4 @@
-package com.atul.tutorial.oauth;
+package com.atul.tutorial.oauth.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

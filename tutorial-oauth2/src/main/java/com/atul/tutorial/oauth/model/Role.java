@@ -1,4 +1,4 @@
-package com.atul.tutorial.oauth.data;
+package com.atul.tutorial.oauth.model;
 
 import java.util.HashSet;
 import java.util.Set;

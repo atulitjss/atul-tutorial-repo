@@ -1,4 +1,4 @@
-package com.atul.tutorial.oauth;
+package com.atul.tutorial.oauth.service;
 
 import java.util.Collection;
 
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.atul.tutorial.oauth.data.User;
-import com.atul.tutorial.oauth.data.UserRepository;
+import com.atul.tutorial.oauth.model.User;
+import com.atul.tutorial.oauth.repository.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

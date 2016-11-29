@@ -1,4 +1,4 @@
-package com.atul.tutorial.oauth;
+package com.atul.tutorial.oauth.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -6,7 +6,8 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.atul.tutorial.oauth.data.User;
+import com.atul.tutorial.oauth.model.Greeting;
+import com.atul.tutorial.oauth.model.User;
 
 
 
